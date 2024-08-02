@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
 /* General Styles */
 body {
@@ -8,15 +7,28 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #ff6f61; /* Light blue background */
+    background: linear-gradient(135deg, blue, white);
     color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', sans-serif;
     line-height: 1.6;
+    animation: backgroundAnimation 5s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(135deg, rgb(45, 154, 163), rgb(200, 255, 0)); }
+    50% { background: linear-gradient(135deg, rgb(220, 97, 97), rgb(240, 15, 172)); }
+    100% { background: linear-gradient(135deg, rgb(58, 215, 58), #ffd700); }
+}
+
+*{
+    font-weight: 600;
+    text-align: center;
 }
 
 a {
-    color: #007bff; /* Bright blue for links */
+    color: #e91e63;
     text-decoration: none;
+    font-weight: bold;
 }
 
 a:hover {
@@ -32,13 +44,15 @@ a:hover {
 
 /* Navbar Styles */
 nav {
-    background-color: #ff6f61; /* Bright coral */
+    background-color: #fff;
     padding: 10px 0;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    color: black;
 }
 
 .nav-links {
@@ -49,48 +63,38 @@ nav {
 
 .nav-links a {
     font-size: 1.2rem;
-    font-weight: 600;
     transition: all 0.3s ease;
-    color: #fff; /* White text */
+    color: black;
 }
 
 .nav-links a:hover {
-    color: #ffeb3b; /* Bright yellow */
+    color: #ffff00;
     transform: scale(1.1);
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px #ffeb3b;
 }
 
 /* Header Styles */
 header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 60px 20px;
     color: #fff;
     position: relative;
     overflow: hidden;
 }
 
 header h1 {
-    font-size: 3rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px #ffeb3b;
     animation: textFocus 3s infinite;
 }
 
-@keyframes textFocus {
-    0%, 100% {
-        text-shadow: 0 0 10px #fff, 0 0 20px #ffeb3b, 0 0 30px #ffeb3b, 0 0 40px #ffeb3b, 0 0 50px #ffeb3b, 0 0 60px #ffeb3b, 0 0 70px #ffeb3b;
-    }
-    50% {
-        text-shadow: none;
-    }
-}
-
 header p {
-    font-size: 1.2rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 20px;
     position: relative;
@@ -98,22 +102,23 @@ header p {
 }
 
 header button {
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff; /* Bright blue */
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative;
     z-index: 1;
+    text-shadow: 2px 2px 0px #000;
 }
 
 header button:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 header::before {
@@ -144,36 +149,6 @@ header .floating-elements div {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     animation: float 10s infinite;
-}
-
-header .floating-elements div:nth-child(1) {
-    top: 20%;
-    left: 10%;
-    animation-duration: 8s;
-}
-
-header .floating-elements div:nth-child(2) {
-    top: 30%;
-    left: 50%;
-    animation-duration: 10s;
-}
-
-header .floating-elements div:nth-child(3) {
-    top: 50%;
-    left: 30%;
-    animation-duration: 12s;
-}
-
-header .floating-elements div:nth-child(4) {
-    top: 70%;
-    left: 80%;
-    animation-duration: 9s;
-}
-
-header .floating-elements div:nth-child(5) {
-    top: 80%;
-    left: 20%;
-    animation-duration: 7s;
 }
 
 @keyframes float {
@@ -219,7 +194,7 @@ header .floating-elements div:nth-child(5) {
 }
 
 .bigger-font {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .contract-address {
@@ -239,16 +214,18 @@ header .floating-elements div:nth-child(5) {
 button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #007bff; /* Bright blue */
+    background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-shadow: 2px 2px 0px #000;
 }
 
 button:hover {
-    background-color: #0056b3; /* Darker blue */
+    background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 .about-pangu, .roost-101, .tokenomics, footer {
@@ -256,7 +233,7 @@ button:hover {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #e0f7fa; /* Light cyan */
+    background-color: #e0f7fa;
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
@@ -266,14 +243,15 @@ button:hover {
     overflow: hidden;
     position: relative;
     white-space: nowrap;
+    font-size: 2rem;
+    color: #ff4081;
+    text-shadow: 2px 2px 0px #000, 3px 3px 0px #ffff00;
 }
 
 .marquee span {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 10s linear infinite;
-    font-size: 2rem;
-    color: #ff6f61; /* Bright coral */
 }
 
 @keyframes marquee {
@@ -285,11 +263,11 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     gap: 20px;
-  text-align: center;
+    text-align: center;
 }
 
 .step {
-    background-color: #ffeb3b; /* Bright yellow */
+    background-color: #ffeb3b;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -299,12 +277,13 @@ button:hover {
 
 .step:hover {
     transform: scale(1.05);
-    background-color: #ffeb3b; /* Bright yellow */
+    background-color: #ffc107;
 }
 
 .step h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    /* text-shadow: 2px 2px 0px #000, 3px 3px 0px #fff; */
 }
 
 /* Footer Styles */
@@ -318,7 +297,7 @@ footer h2 {
 }
 
 footer p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 /* Responsive Design */
@@ -342,3 +321,93 @@ footer p {
         margin: 20px 0;
     }
 }
+
+/* General Styles */
+body {
+    background: linear-gradient(135deg, #4a90e2, #f3f4f6);
+    color: #333;
+    font-family: 'Comic Neue', sans-serif;
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 4rem;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: blueviolet;
+}
+
+/* Carousel Styles */
+.carousel {
+    border: 5px solid #000; /* Comic-style border */
+}
+
+/* Steps Styles */
+.step {
+    border: 4px solid #000; /* Comic-style border */
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating Elements */
+header .floating-elements div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000; /* Comic-style border */
+}
+
+/* Add Speech Bubbles */
+.speech-bubble {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+    border-bottom-color: #fff;
+    transform: translateX(-50%);
+}
+
+/* Comic Action Lines */
+.action-lines {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: url('path_to_action_lines_image.png') repeat;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Footer Styles */
+footer {
+    border-top: 5px solid #000; /* Comic-style border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+}
+
