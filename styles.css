@@ -387,3 +387,8 @@ button:hover {
     margin: auto 0;
   }
 }
+
+.about-pangu{
+  background-color: #0056b3;
+  color: #fff;
+}
