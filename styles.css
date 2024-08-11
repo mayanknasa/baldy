@@ -276,7 +276,7 @@ button:hover {
     padding: 10px;
   }
   .carousel{
-    width: 80% !important;
+    width: 100% !important;
   }
 }
 
@@ -366,3 +366,24 @@ button:hover {
     object-fit: cover; /* Scales the image to cover the entire container */
   }
   
+  .main-image{
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+  }
+  
+@media (max-width: 768px) {
+  .main-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .main-image img{
+    width: 100vw;
+    margin: auto 0;
+  }
+}
