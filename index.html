@@ -18,10 +18,12 @@
             <img src="./images/main.png" alt="Image 1" />
           </div>          
       <!-- <h1>BALDY ON BASE</h1> -->
-      <p class="bigger-font p-rl10">
+       <div class="bigger-font cloud-text">
+        <p>
         Meet Baldy, the dog that's all bark and no hair! This bald dog is here
         to fetch you some laughs and maybe a fortune.
       </p>
+       </div> 
       <p>
         <a href="#"><button>Buy Baldy</button></a>
       </p>
@@ -33,7 +35,7 @@
         >
       </div> -->
     <div class="contract-address focus-text-1 bigger-font">
-      <p>CONTRACT ADDRESS</p>
+      <p class="white-font"><b>CONTRACT ADDRESS</b></p>
       <input type="text" value="" readonly />
       <button onclick="copyToClipboard()">COPY</button>
     </div>
@@ -112,13 +114,6 @@
         </div>
       </div>
     </div>
-    <div class="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./images/4.jpg" alt="Image 1" />
-        </div>
-      </div>
-    </div>
     <footer>
       <h2 class="focus-text-1 bigger-font">SOCIALS</h2>
       <p class="focus-text-2 bigger-font">Join the Baldy community</p>
@@ -127,7 +122,6 @@
         <a href="/">Telegram</a>
       </p>
     </footer>
-    <script src="./scripts.js"></script>
     <script>
       function copyToClipboard() {
         var copyText = document.querySelector(".contract-address input");
