@@ -256,10 +256,11 @@ h1 {
 /* Cloud Text */
 .cloud-text {
   background: url('./images/cloud.png') no-repeat center center;
-  background-size: cover;
-  max-width: 350px;
-  padding: 100px;
+  background-size: contain;
   font-weight: 700;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 130px;
 }
 
 .white-font {
@@ -296,8 +297,11 @@ h1 {
   }
 
   .cloud-text {
-    padding: 70px;
+    padding: 30px 0;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .cloud-text p{
