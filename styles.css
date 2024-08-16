@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Happy+Monkey&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Happy+Monkey&family=Raleway:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
 /* General Styles */
 body {
@@ -9,7 +11,7 @@ body {
   margin: 0;
   background: #016ddc;
   color: #333;
-  font-family: "Happy Monkey", system-ui;
+  font-family: "Dosis", system-ui;
   line-height: 1.6;
 }
 
@@ -143,10 +145,33 @@ button:hover {
 }
 
 .about-pangu {
-  background-color: #0056b3;
-  color: #fff;
+  background-color: #EFFAFE;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: #1D465C;
+    box-shadow: 10px 10px 0px 0px #1D465C;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
 }
 
+.about-pangu .sub-heading{
+  font-family:  "Titan One", sans-serif;
+  font-size: 42px;
+  color: #DCF3FF;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #1B2D36;
+  stroke: #1B2D36;
+  text-shadow: 0px 4px 0px #1B2D36;
+}
+.about-pangu p{
+  font-size: 18px;
+  line-height: 1.5em;
+  color: #1B2D36;
+  font-family: "Dosis", Sans-serif;
+  letter-spacing: 0.4px;
+}
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -190,6 +215,7 @@ button:hover {
 
 .step p {
   margin-top: 0;
+  font-size: larger;
 }
 
 .sub-heading {
