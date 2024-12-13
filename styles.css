@@ -3,7 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Happy+Monkey&family=Raleway:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap');
 
 /* General Styles */
-body {
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#content {
   display: flex;
   flex-direction: column;
   align-items: center;
